@@ -55,7 +55,15 @@ public class Company{
     
 
 	public double calculateUsefulPromLifeCost(){
-		return 0.0;
+		double num = 0;
+		double 
+		for (int i = 0; i<MAX_BATTERIES; i++){
+			
+			if (batteries[i]!=null){
+				num += batteries[i].CalculateusefulLifeCost() + "\n";
+			}
+		}
+		return num;
 	}
 
 }
