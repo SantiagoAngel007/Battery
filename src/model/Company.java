@@ -37,7 +37,29 @@ public class Company{
     }
 
     public String showTotalBatteries() {
-    	return "";
+		int counterB = 0;
+		int counterR = 0;
+		int counterF = 0;
+		if(batteries != null){
+			for(int i=0; i< MAX_BATTERIES; i++){
+				if (batteries[i] instanceof RechargeableBattery){
+					counterR++;
+                }
+			}
+		}
+		
+		if(batteries != null){
+			for(int i=0; i< MAX_BATTERIES; i++){
+				if (batteries[i] instanceof Battery){
+					counterB++;
+                }
+			}
+		}
+		
+		
+		counterF = counterB - counterR;
+		
+    	return "Normal Batterys = "+ counterF + " Rechargeable Battery = " + counterR + "\n"  ;
     }
     
     public String showBatteriesInfo() {
@@ -53,17 +75,43 @@ public class Company{
     	return str;
     }
     
-
+	
 	public double calculateUsefulPromLifeCost(){
 		double num = 0;
-		double 
+		//double 
 		for (int i = 0; i<MAX_BATTERIES; i++){
-			
 			if (batteries[i]!=null){
-				num += batteries[i].CalculateusefulLifeCost() + "\n";
+				if (batteries[i] instanceof RechargeableBattery){
+				num += ((RechargeableBattery)(batteries[i])).calculateusefulLifeCost();
+				}
 			}
 		}
+		
 		return num;
 	}
-
+	
+	
+	public double calculateAverage(){
+		
+		double average = (calculateUsefulPromLifeCost())/(getAmountOfBatterys());
+		
+		return average;
+	}
+	
+	
+	public int getAmountOfBatterys(){
+		int counter = 0;
+		if(batteries != null){
+			for(int i=0; i< MAX_BATTERIES; i++){
+				if (batteries[i] instanceof Battery){
+					counter++;
+                }
+			}
+		}
+		return counter;
+	}
+	
+	
+	
+	
 }

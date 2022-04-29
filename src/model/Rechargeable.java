@@ -4,7 +4,7 @@ package model;
 public interface Rechargeable{
 	
 	
-	public double CalculateusefulLifeCost();
+	public double calculateusefulLifeCost();
 	
 	
 	

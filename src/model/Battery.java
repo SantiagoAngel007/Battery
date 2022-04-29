@@ -1,6 +1,6 @@
 package model;
 
-public class Battery{
+public class Battery {
 	
 	private String name;
 	
@@ -24,6 +24,9 @@ public class Battery{
 		
 	}
 	
+	
+	
+	
 	public String getName(){
 		return name;
 	}
@@ -41,7 +44,15 @@ public class Battery{
 	}
 	
 	public String toString() {
-		return " name " + name + " voltage " + voltage + " cost " + cost + " capacity " +  capacity;
+		
+		return "**** BATERIA NO RECARGABLE ****\n" + 
+		"Name: " + name + "\n" +
+		"Voltage: " + voltage + "\n" +
+		"Cost: " + cost + "\n" +
+		"Capacity: " + capacity + "\n";
+		
+		
+		//return " name " + name + " voltage " + voltage + " cost " + cost + " capacity " +  capacity;
 	}
 	
 	

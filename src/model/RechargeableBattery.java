@@ -27,7 +27,7 @@ public class RechargeableBattery extends Battery implements Rechargeable{
 	}
 	
 	@Override
-	public double CalculateusefulLifeCost(){
+	public double calculateusefulLifeCost(){
 		
 		double calculate = 0;
 		
@@ -45,7 +45,13 @@ public class RechargeableBattery extends Battery implements Rechargeable{
 	
 	
 	public String toString() {
-		return " name " + super.getName() + " voltage " + super.getVoltage() + " cost " + super.getCost() + " capacity " +  super.getCapacity() + " type " +  type + " chargerNumber " +  chargerNumber + "Calculate life cost" + CalculateusefulLifeCost();
+		
+		return "**** BATERIA RECARGABLE ****\n" + 
+		"Nombre: " + super.getName() + "\n" +
+		"Costo de vida util " + calculateusefulLifeCost() + "\n";
+		
+		
+		//return " name " + super.getName() + " voltage " + super.getVoltage() + " cost " + super.getCost() + " capacity " +  super.getCapacity() + " type " +  type + " chargerNumber " +  chargerNumber + "Calculate life cost" + calculateusefulLifeCost();
 	}
 
 

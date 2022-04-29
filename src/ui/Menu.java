@@ -58,12 +58,12 @@ public class Menu {
 			break;
 	
 		case 3:
-			//System.out.println(company.showTotalBatteries());
+			System.out.println(company.showTotalBatteries());
 			//"(3) Para Mostrar el total de baterias tradicionales y recargables\n"+ 
 			break;
 
 		case 4:
-			System.out.println("El costo promedio de vida util de las baterias recargables es: "+ company.calculateUsefulPromLifeCost());
+			System.out.println("El costo promedio de vida util de las baterias recargables es: "+ company.calculateAverage() + "\n");
 		    // "(4) Para Calcular el promedio de costo de vida util de las baterias recargables\n"+ 
 			break;
 
